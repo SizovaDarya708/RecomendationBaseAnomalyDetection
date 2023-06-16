@@ -1,5 +1,7 @@
 # RecomendationBaseAnomalyDetection
 
+![image](https://github.com/SizovaDarya708/RecomendationBaseAnomalyDetection/blob/main/Pictures/video.mp4)
+
 ## Библиотека для поиска аномалий
 
 ### Данная библиотека содержит функционал предобработки данных, создания модели поиска аномалий на основе рекомендательных систем
