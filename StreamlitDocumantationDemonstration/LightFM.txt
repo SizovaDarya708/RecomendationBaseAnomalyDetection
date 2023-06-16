@@ -1,0 +1,41 @@
+LightFM main documentation
+
+Two learning rate schedules are available:
+
+adagrad: 4
+
+adadelta: 5
+
+Parameters
+no_components (int, optional) – the dimensionality of the feature latent embeddings.
+
+k (int, optional) – for k-OS training, the k-th positive example will be selected from the n positive examples sampled for every user.
+
+n (int, optional) – for k-OS training, maximum number of positives sampled for each update.
+
+learning_schedule (string, optional) – one of (‘adagrad’, ‘adadelta’).
+
+loss (string, optional) – one of (‘logistic’, ‘bpr’, ‘warp’, ‘warp-kos’): the loss function.
+
+learning_rate (float, optional) – initial learning rate for the adagrad learning schedule.
+
+rho (float, optional) – moving average coefficient for the adadelta learning schedule.
+
+epsilon (float, optional) – conditioning parameter for the adadelta learning schedule.
+
+item_alpha (float, optional) – L2 penalty on item features. Tip: setting this number too high can slow down training. One good way to check is if the final weights in the embeddings turned out to be mostly zero. The same idea applies to the user_alpha parameter.
+
+user_alpha (float, optional) – L2 penalty on user features.
+
+max_sampled (int, optional) – maximum number of negative samples used during WARP fitting. It requires a lot of sampling to find negative triplets for users that are already well represented by the model; this can lead to very long training times and overfitting. Setting this to a higher number will generally lead to longer training times, but may in some cases improve accuracy.
+
+random_state (int seed, RandomState instance, or None) – The seed of the pseudo random number generator to use when shuffling the data and initializing the parameters.
+
+Variables
+~LightFM.item_embeddings (np.float32 array of shape [n_item_features, n_components]) – Contains the estimated latent vectors for item features. The [i, j]-th entry gives the value of the j-th component for the i-th item feature. In the simplest case where the item feature matrix is an identity matrix, the i-th row will represent the i-th item latent vector.
+
+~LightFM.user_embeddings (np.float32 array of shape [n_user_features, n_components]) – Contains the estimated latent vectors for user features. The [i, j]-th entry gives the value of the j-th component for the i-th user feature. In the simplest case where the user feature matrix is an identity matrix, the i-th row will represent the i-th user latent vector.
+
+~LightFM.item_biases (np.float32 array of shape [n_item_features,]) – Contains the biases for item_features.
+
+~LightFM.user_biases (np.float32 array of shape [n_user_features,]) – Contains the biases for user_features.
