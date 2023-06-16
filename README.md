@@ -1,6 +1,6 @@
 # RecomendationBaseAnomalyDetection
 
-![image](https://github.com/SizovaDarya708/RecomendationBaseAnomalyDetection/blob/main/Pictures/video.mp4)
+![image](https://github.com/SizovaDarya708/RecomendationBaseAnomalyDetection/blob/main/Pictures/video1.gif)
 
 ## Библиотека для поиска аномалий
 
